@@ -62,7 +62,8 @@ public class addTCSstockInWatchlist {
 		String txt = wp.getDashboardWordText();
 		Assert.assertEquals(txt, "Dashboard");
 		
-		test.log(LogStatus.PASS, "Shivaji Log In Successfull");
+		test.log(LogStatus.PASS, "Log In Successfull");
+		test.log(LogStatus.FAIL, "Log In not Successfull");
 		
 		Reporter.log("Log In Successfull", true);
 		
