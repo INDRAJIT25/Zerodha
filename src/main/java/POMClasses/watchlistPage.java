@@ -14,6 +14,9 @@ public class watchlistPage extends UtilClass {
 	@FindBy(xpath = "//span[text()='Dashboard']")
 	private WebElement dashboardWord;
 	
+	@FindBy(xpath = "//input[@type='text']")
+	private WebElement searchField;
+		
 
 	public watchlistPage(WebDriver driver)
 	{
@@ -25,5 +28,11 @@ public class watchlistPage extends UtilClass {
 	{
 		isElementVisible(driver,dashboardWord );
 		return dashboardWord.getText();	
+	}
+
+	public void seachTCS()
+	{
+		isElementVisible(driver,dashboardWord );
+		searchField.sendKeys("TCS");
 	}
 }

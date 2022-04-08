@@ -6,7 +6,6 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -18,11 +17,9 @@ import BaseClasses.Baseclass;
 import POMClasses.logInPage;
 import POMClasses.watchlistPage;
 
-//@Listeners(ListnerClasses.ListenerClass.class)
-public class addTCSstockInWatchlist {
+public class UserCanAddFund {
 
 	WebDriver driver;
-	logInPage lp;
 	watchlistPage wp;
 	ExtentReports reports;
 	ExtentTest test;
@@ -41,33 +38,12 @@ public class addTCSstockInWatchlist {
 	@BeforeMethod
 	public void beforeMethod()
 	{
-		lp = new logInPage(driver);
 		wp = new watchlistPage(driver);
 	}
 	
 	@Test
-	public void userCanLogIn()
+	public void addFund()
 	{
-		lp.enterLogInID();
-		Reporter.log("Login Id Entered", true);
-		
-		lp.enterPassword();
-		Reporter.log("Password Entered", true);
-		lp.clickLogIn();
-		
-		lp.enterPin();
-		lp.clickContinueButton();
-		Reporter.log("Pin Entered", true);
-		
-		String txt = wp.getDashboardWordText();
-		Assert.assertEquals(txt, "Dashboard");
-		
-		test.log(LogStatus.PASS, "Log In Successfull");
-		test.log(LogStatus.FAIL, "Log In not Successfull");
-		
-		Reporter.log("Log In Successfull", true);
-		
-		driver.switchTo().alert().dismiss();
 		
 	}
 	
