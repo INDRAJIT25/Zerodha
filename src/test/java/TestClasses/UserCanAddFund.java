@@ -16,7 +16,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import BaseClasses.Baseclass;
 import POMClasses.logInPage;
 import POMClasses.watchlistPage;
-
+//testing
 public class UserCanAddFund {
 
 	WebDriver driver;
