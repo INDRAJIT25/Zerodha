@@ -25,6 +25,8 @@ public class logInPage extends UtilClass {
 	
 	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement continueButton;
+// indrajit bhau 
+	
 	
 	public logInPage(WebDriver driver)
 	{
